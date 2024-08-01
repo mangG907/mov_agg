@@ -13,8 +13,8 @@ def merge(load_dt="20240724"):
        ]
     df = read_df[cols]
     # 울버린만 조회 
-    #print(df.head(3))
-    df_where = df[df['movieCd'] == '20247781'].copy() # 날짜조건 load_dt 인자 받기
+    #print(df.head(100))
+    df_where = df[(df['movieCd'] == '20247781') & (df['load_dt'] == int(load_dt))].copy() # 날짜조건 load_dt 인자 받기
     print(df_where)
     print(df_where.dtypes)
 
